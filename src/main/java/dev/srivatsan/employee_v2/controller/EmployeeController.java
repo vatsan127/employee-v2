@@ -1,7 +1,7 @@
 package dev.srivatsan.employee_v2.controller;
 
 import dev.srivatsan.employee_v2.dto.EmployeeDTO;
-import dev.srivatsan.employee_v2.model.Employee;
+import dev.srivatsan.employee_v2.entity.Employee;
 import dev.srivatsan.employee_v2.service.EmployeeService;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -27,7 +27,9 @@ public class EmployeeController {
         return ResponseEntity.status(HttpStatus.OK).body(employeeById);
     }
 
-    /*@GetMapping("/employee/all")
+/*
+
+    @GetMapping("/employee/all")
     public ResponseEntity<Page<Employee>> getAllEmployees(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size
@@ -35,7 +37,8 @@ public class EmployeeController {
         Pageable pageable = PageRequest.of(page, size);
         Page<Employee> employees = employeeService.getAllEmployees(pageable);
         return ResponseEntity.ok(employees);
-    }*/
+    }
+*/
 
     @GetMapping("/all")
     public ResponseEntity<List<EmployeeDTO>> getAllEmployees(

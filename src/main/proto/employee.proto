@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "dev.srivatsan";
+
+service EmployeeService{
+  rpc getEmployeeById(EmployeeByIdRequest) returns ;
+}
+
+message EmployeeByIdRequest{
+  int64 id = 1;
+}
+
+message EmployeeByIdResponse{
+  int64 id = 1;
+}

@@ -1,13 +1,11 @@
 package dev.srivatsan.employee_v2.service;
 
 import dev.srivatsan.employee_v2.dto.EmployeeDTO;
-import dev.srivatsan.employee_v2.exception.CustomException;
 import dev.srivatsan.employee_v2.exception.UserNotFoundException;
-import dev.srivatsan.employee_v2.model.Employee;
+import dev.srivatsan.employee_v2.entity.Employee;
 import dev.srivatsan.employee_v2.repository.EmployeeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +16,7 @@ import java.util.Optional;
 @Service
 public class EmployeeService {
 
-    private EmployeeRepository employeeRepository;
+    private final EmployeeRepository employeeRepository;
 
     public EmployeeService(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;

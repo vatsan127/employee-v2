@@ -1,10 +1,12 @@
-package dev.srivatsan.employee_v2.model;
+package dev.srivatsan.employee_v2.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDate;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Entity
 @Table(name = "employee")
@@ -19,5 +21,11 @@ public class Employee {
     private String gender;
     private LocalDate birthDate;
     private LocalDate hireDate;
+
+    @OneToOne
+    @JoinColumn(name = "id", referencedColumnName = "employee_id")
+    private DepartmentEmployee departmentEmployee;
+
+
 
 }

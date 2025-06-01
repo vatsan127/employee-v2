@@ -1,6 +1,6 @@
 server:
   port: 8080
-  servlet.context-path: /${spring.application.name}
+  servlet.context-path: /${spring.application.name}/${spring.application.version}
 
 grpc:
   server:
@@ -9,10 +9,10 @@ grpc:
 ---
 spring:
   application:
-    name: employee-v2
-    version: 2.0.0
+    name: employee
+    version: v2
   profiles.active: ${SPRING_PROFILES_ACTIVE:postgres}
-#  banner.location: banner.txt
+  #  banner.location: banner.txt
   jpa:
     hibernate.ddl-auto: none # create
     show-sql: true

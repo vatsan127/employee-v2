@@ -1,7 +1,7 @@
 package dev.srivatsan.employee_v2.repository;
 
 
-import dev.srivatsan.employee_v2.model.Employee;
+import dev.srivatsan.employee_v2.entity.Employee;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

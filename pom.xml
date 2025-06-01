@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>dev.srivatsan</groupId>
-    <artifactId>employee-v2</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>employee</artifactId>
+    <version>v2</version>
     <name>employee-v2</name>
     <description>Spring Boot Employee Project with large Dataset</description>
     <developers>
